@@ -33,7 +33,7 @@ public class FXMLDocumentController implements Initializable {
     private Field field;
     private long lastUpdate;
     private   AnimationTimer animationTimer;
-    int step=4;
+    int step=5;
 
     @FXML
     private void handleKeyPressed(KeyEvent event) {
@@ -65,6 +65,8 @@ public class FXMLDocumentController implements Initializable {
             Paddle paddle = field.getPaddles().get(key);
             gc.fillRect(paddle.getX(), paddle.getY(), paddle.getWidth(), paddle.getHeight());
         }
+        double ballR = field.getBall().getR();
+        gc.fillOval(field.getBall().getX()-(ballR/2),field.getBall().getY()-(ballR/2),ballR,ballR);
     }
 
     @Override
@@ -82,13 +84,7 @@ public class FXMLDocumentController implements Initializable {
             public void handle(long now) {
                 if (now - lastUpdate >= 10) {
                     lastUpdate = now;
-                    Paddle paddle = field.getPaddles().get(Field.getLocalhost());
-
-                    if (paddle.isMovingUp() && paddle.getY() > 0) {
-                        paddle.setY(paddle.getY() - step);
-                    } else if (paddle.isMovingDown() && paddle.getY() + paddle.getHeight() < field.getHeight()) {
-                        paddle.setY(paddle.getY() + step);
-                    }
+                    field.update();
                     draw();
                 }
             }
