@@ -1,7 +1,7 @@
 package ch.bbw.model;
 
 public class Paddle {
-    int x,y,height,width;
+    int x, y, height, width;
     boolean movingUp, movingDown;
 
     public Paddle(int x, int y, int height, int width) {
@@ -49,5 +49,17 @@ public class Paddle {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public boolean isColliding(int x, int y, double r, boolean isHost) {
+        double rr = r / 2;
+        if (x - rr >= this.x && y + rr >= this.y && x <= this.x + rr + width && y - rr <= y + height) {
+            return true;
+        }
+        return false;
+    }
+
+    public double getCollideAngle(int x) {
+        return 0;
     }
 }

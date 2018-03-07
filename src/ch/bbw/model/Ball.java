@@ -18,8 +18,7 @@ public class Ball {
     }
 
     public void bounceWall() {
-        System.out.println("bounced");
-        y *= -1;
+        velY *= -1;
     }
 
     public int getY() {

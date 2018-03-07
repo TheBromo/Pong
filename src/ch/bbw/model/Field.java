@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Field {
 
-    int height = 500, width = 800,step=5;
+    int height = 500, width = 800, step = 5;
     Ball ball = new Ball(20, 20, 20);
     HashMap<InetAddress, Paddle> paddles = new HashMap<>();
     private static InetAddress localhost;
@@ -18,7 +18,7 @@ public class Field {
 
     }
 
-    public void update(){
+    public void update() {
         Paddle paddle = getPaddles().get(Field.getLocalhost());
 
         if (paddle.isMovingUp() && paddle.getY() > 0) {
@@ -26,8 +26,11 @@ public class Field {
         } else if (paddle.isMovingDown() && paddle.getY() + paddle.getHeight() < getHeight()) {
             paddle.setY(paddle.getY() + step);
         }
-        if (ball.y >=500||ball.y <=0)ball.bounceWall();
-        ball.move();
+        if (ball.y + ball.r / 2 >= height || ball.y - ball.r / 2 <= 0) ball.bounceWall();
+        if (paddle.isColliding(ball.x, ball.y, ball.r, true)){
+
+        }
+            ball.move();
 
     }
 
