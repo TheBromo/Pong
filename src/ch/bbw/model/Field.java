@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class Field {
 
     int height = 500, width = 800, step = 5;
-    Ball ball = new Ball(20, 20, 20);
+    Ball ball = new Ball(300, 20, 20);
     HashMap<InetAddress, Paddle> paddles = new HashMap<>();
     private static InetAddress localhost;
 
@@ -27,10 +27,12 @@ public class Field {
             paddle.setY(paddle.getY() + step);
         }
         if (ball.y + ball.r / 2 >= height || ball.y - ball.r / 2 <= 0) ball.bounceWall();
-        if (paddle.isColliding(ball.x, ball.y, ball.r, true)){
-
+        for (InetAddress address: paddles.keySet()) {
+            if (paddles.get(address).isColliding(ball.x, ball.y, ball.r, address == Field.getLocalhost())) {
+                ball.bouncePaddle();
+            }
         }
-            ball.move();
+        ball.move();
 
     }
 

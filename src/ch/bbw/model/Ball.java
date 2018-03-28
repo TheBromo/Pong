@@ -8,7 +8,7 @@ public class Ball {
         this.x = x;
         this.y = y;
         this.r = r;
-        velX = 5;
+        velX = -5;
         velY = 5;
     }
 
@@ -19,6 +19,9 @@ public class Ball {
 
     public void bounceWall() {
         velY *= -1;
+    }
+    public void bouncePaddle(){
+        velX *= -1;
     }
 
     public int getY() {

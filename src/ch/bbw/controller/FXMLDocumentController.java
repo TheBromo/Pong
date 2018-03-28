@@ -37,7 +37,6 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleKeyPressed(KeyEvent event) {
-
         Paddle paddle = field.getPaddles().get(Field.getLocalhost());
         if (event.getCode() == KeyCode.W) {
             paddle.setMovingUp(true);
@@ -82,7 +81,7 @@ public class FXMLDocumentController implements Initializable {
         animationTimer   = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                if (now - lastUpdate >= 10) {
+                if (now - lastUpdate >= 500000) {
                     lastUpdate = now;
                     field.update();
                     draw();
