@@ -29,6 +29,7 @@ public class Field {
         if (ball.y + ball.r / 2 >= height || ball.y - ball.r / 2 <= 0) ball.bounceWall();
         for (InetAddress address: paddles.keySet()) {
             if (paddles.get(address).isColliding(ball.x, ball.y, ball.r, address == Field.getLocalhost())) {
+                ball.getNewVelX();
                 ball.bouncePaddle();
             }
         }
@@ -51,4 +52,6 @@ public class Field {
     public int getHeight() {
         return height;
     }
+
+
 }

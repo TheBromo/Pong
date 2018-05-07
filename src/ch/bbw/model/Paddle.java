@@ -54,16 +54,17 @@ public class Paddle {
 
     public boolean isColliding(int x, int y, double r, boolean isHost) {
         double rr = r / 2;
-        if (isHost){
-            if (x - rr >= this.x && x <= this.x + rr + width && (y - rr) <= (this.y + height)&&(y + rr) >= this.y) {
-                return true;
-            }
-        }else {
-            if (x+rr >= this.x && x <= this.x + rr + width && (y - rr) <= (this.y + height)&&(y + rr) >= this.y) {
-                return true;
-            }
+        if (isHost) {
+            return x - rr >= this.x && x <= this.x + rr + width && (y - rr) <= (this.y + height) && (y + rr) >= this.y;
+        } else {
+            return x + rr >= this.x && x <= this.x + rr + width && (y - rr) <= (this.y + height) && (y + rr) >= this.y;
         }
-        return false;
+    }
+
+    public double getRelativePos(int x) {
+        if (x >= this.x && x <= this.x + height) return (double) (x - this.x) / height;
+        return -1;
+
     }
 
     public double getCollideAngle(int x) {
