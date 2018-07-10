@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Field {
 
-    int height = 500, width = 800, step = 5;
+    int height = 500, width = 800, step = 100;
     Ball ball = new Ball(300, 20, 20);
     HashMap<InetAddress, Paddle> paddles = new HashMap<>();
     private static InetAddress localhost;
@@ -18,22 +18,32 @@ public class Field {
 
     }
 
-    public void update() {
+    public void update(long passedTime) {
         Paddle paddle = getPaddles().get(Field.getLocalhost());
 
+        //movement for the paddle
         if (paddle.isMovingUp() && paddle.getY() > 0) {
             paddle.setY(paddle.getY() - step);
         } else if (paddle.isMovingDown() && paddle.getY() + paddle.getHeight() < getHeight()) {
             paddle.setY(paddle.getY() + step);
         }
+        //if ball hits the roof or floor it Bounces
+        //TODO: Make ball bounce according to its direction
         if (ball.y + ball.r / 2 >= height || ball.y - ball.r / 2 <= 0) ball.bounceWall();
-        for (InetAddress address: paddles.keySet()) {
+
+        for (InetAddress address : paddles.keySet()) {
+            //looks if the Ball is colliding with the paddle
             if (paddles.get(address).isColliding(ball.x, ball.y, ball.r, address == Field.getLocalhost())) {
-                ball.getNewVelX();
+                //TODO: Rename to "get new Angle", should return
+                ball.getNewVelX(0);
+                //bounces the ball of the Paddle
                 ball.bouncePaddle();
             }
         }
-        ball.move();
+        //calculates distance that ball moved in the time span
+        int distance = (int) (step / 1000.0 * passedTime);
+        //moves the ball in its directions
+        ball.move(distance);
 
     }
 

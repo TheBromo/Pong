@@ -12,9 +12,10 @@ public class Ball {
         velY = 5;
     }
 
-    public void move() {
-        x += velX;
-        y += velY;
+    public void move(int distance) {
+        //TODO: Add different velocities for x and y
+        x += distance;
+        y += distance;
     }
 
     public void bounceWall() {
@@ -66,7 +67,7 @@ public class Ball {
 
     public double getNewVelX(double relativePos) {
         if (relativePos!=-1){
-
         }
+        return 0;
     }
 }

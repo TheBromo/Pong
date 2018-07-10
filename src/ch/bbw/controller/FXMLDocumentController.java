@@ -32,8 +32,8 @@ public class FXMLDocumentController implements Initializable {
     private GraphicsContext gc;
     private Field field;
     private long lastUpdate;
-    private   AnimationTimer animationTimer;
-    int step=5;
+    private AnimationTimer animationTimer;
+    int step = 5;
 
     @FXML
     private void handleKeyPressed(KeyEvent event) {
@@ -65,7 +65,7 @@ public class FXMLDocumentController implements Initializable {
             gc.fillRect(paddle.getX(), paddle.getY(), paddle.getWidth(), paddle.getHeight());
         }
         double ballR = field.getBall().getR();
-        gc.fillOval(field.getBall().getX()-(ballR/2),field.getBall().getY()-(ballR/2),ballR,ballR);
+        gc.fillOval(field.getBall().getX() - (ballR / 2), field.getBall().getY() - (ballR / 2), ballR, ballR);
     }
 
     @Override
@@ -78,14 +78,13 @@ public class FXMLDocumentController implements Initializable {
         }
         draw();
 
-        animationTimer   = new AnimationTimer() {
+        animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                if (now - lastUpdate >= 500000) {
-                    lastUpdate = now;
-                    field.update();
-                    draw();
-                }
+                field.update(now - lastUpdate);
+                lastUpdate = now;
+                draw();
+
             }
         };
         animationTimer.start();
