@@ -52,7 +52,7 @@ public class Paddle {
     }
 
 
-    public boolean isColliding(int x, int y, double r, boolean isHost) {
+    public boolean isColliding(double x, double y, double r, boolean isHost) {
         double rr = r / 2;
         if (isHost) {
             return x - rr >= this.x && x <= this.x + rr + width && (y - rr) <= (this.y + height) && (y + rr) >= this.y;

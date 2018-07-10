@@ -1,7 +1,7 @@
 package ch.bbw.model;
 
 public class Ball {
-    int x, y, velX, velY;
+    double x, y, velX, velY;
     double r, angle;
 
     public Ball(int x, int y, double r) {
@@ -12,7 +12,7 @@ public class Ball {
         velY = 5;
     }
 
-    public void move(int distance) {
+    public void move(double distance) {
         //TODO: Add different velocities for x and y
         x += distance;
         y += distance;
@@ -25,7 +25,7 @@ public class Ball {
         velX *= -1;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -33,7 +33,7 @@ public class Ball {
         this.y = y;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -49,7 +49,7 @@ public class Ball {
         this.r = r;
     }
 
-    public int getVelX() {
+    public double getVelX() {
         return velX;
     }
 
@@ -57,7 +57,7 @@ public class Ball {
         this.velX = velX;
     }
 
-    public int getVelY() {
+    public double getVelY() {
         return velY;
     }
 

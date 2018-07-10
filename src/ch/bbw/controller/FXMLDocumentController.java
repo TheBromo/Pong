@@ -8,6 +8,7 @@ import java.net.InetAddress;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 import ch.bbw.model.Field;
 import ch.bbw.model.Paddle;
@@ -66,6 +67,7 @@ public class FXMLDocumentController implements Initializable {
         }
         double ballR = field.getBall().getR();
         gc.fillOval(field.getBall().getX() - (ballR / 2), field.getBall().getY() - (ballR / 2), ballR, ballR);
+        System.out.println("X: "+field.getBall().getX()+" Y: "+field.getBall().getY());
     }
 
     @Override
@@ -81,12 +83,13 @@ public class FXMLDocumentController implements Initializable {
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                field.update(now - lastUpdate);
-                lastUpdate = now;
+                field.update(TimeUnit.NANOSECONDS.toMillis(now) - lastUpdate);
+                lastUpdate = TimeUnit.NANOSECONDS.toMillis(now);
                 draw();
 
             }
         };
+        lastUpdate = System.currentTimeMillis();
         animationTimer.start();
     }
 
