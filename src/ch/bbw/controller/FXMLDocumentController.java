@@ -67,7 +67,6 @@ public class FXMLDocumentController implements Initializable {
         }
         double ballR = field.getBall().getR();
         gc.fillOval(field.getBall().getX() - (ballR / 2), field.getBall().getY() - (ballR / 2), ballR, ballR);
-        System.out.println("X: "+field.getBall().getX()+" Y: "+field.getBall().getY());
     }
 
     @Override

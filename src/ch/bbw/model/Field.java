@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Field {
 
-    int height = 500, width = 800, step = 5;
+    int height = 500, width = 800, step = 250;
     Ball ball = new Ball(300, 20, 20);
     HashMap<InetAddress, Paddle> paddles = new HashMap<>();
     private static InetAddress localhost;
@@ -19,6 +19,8 @@ public class Field {
     }
 
     public void update(long passedTime) {
+        if (passedTime<0)return;
+
         Paddle paddle = getPaddles().get(Field.getLocalhost());
 
         //movement for the paddle
@@ -43,9 +45,7 @@ public class Field {
             }
         }
         //calculates distance that ball moved in the time span
-        System.out.println("Seconds: " + passedTime / 1000.0);
         double distance = 100.0 / 1000.0 * passedTime;
-        System.out.println(distance);
         //moves the ball in its directions
         ball.move(distance);
 
