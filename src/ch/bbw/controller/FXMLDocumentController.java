@@ -96,6 +96,7 @@ public class FXMLDocumentController implements Initializable {
         };
         lastUpdate = System.currentTimeMillis();
         animationTimer.start();
+        //TODO: remove topbar
     }
 
 }
