@@ -4,6 +4,7 @@ package ch.bbw.controller;/*
  * and open the template in the editor.
  */
 
+import java.awt.*;
 import java.net.InetAddress;
 import java.net.URL;
 import java.net.UnknownHostException;
@@ -67,11 +68,16 @@ public class FXMLDocumentController implements Initializable {
         }
         double ballR = field.getBall().getR();
         gc.fillOval(field.getBall().getX() - (ballR / 2), field.getBall().getY() - (ballR / 2), ballR, ballR);
+        gc.setFill(Color.RED);
+        gc.fillRect(0,  500,800,500);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         gc = canvas.getGraphicsContext2D();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        canvas.setHeight(screenSize.getHeight());
+        canvas.setWidth(screenSize.getWidth());
         try {
             field = new Field(InetAddress.getByName("localhost"));
         } catch (UnknownHostException e) {

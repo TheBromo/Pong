@@ -23,6 +23,7 @@ public class FXMLTemplate extends Application {
         Scene scene = new Scene(root);
 
         stage.setResizable(false);
+        stage.setFullScreen(true);
         stage.setScene(scene);
         stage.show();
     }

@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1b41b2b8-9518-4747-88e4-ff10b1fb3c65" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pong/ch/bbw/controller/FXMLDocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/ch/bbw/controller/FXMLDocumentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pong/ch/bbw/model/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/ch/bbw/model/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pong/ch/bbw/controller/FXMLDocumentController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pong/ch/bbw/controller/FXMLDocumentController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/bbw/model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/bbw/model/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/bbw/view/FXMLDocument.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/bbw/view/FXMLDocument.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,17 +21,8 @@
       <file leaf-file-name="FXMLTemplate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/bbw/model/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="357">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -39,8 +30,21 @@
       <file leaf-file-name="FXMLDocumentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="427">
+              <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+              <folding>
+                <element signature="e#2679#2959#0" expanded="true" />
+                <element signature="e#2958#2959#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/bbw/model/Field.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -65,14 +69,16 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ch/bbw/model/Paddle.java" />
         <option value="$PROJECT_DIR$/src/ch/bbw/model/Ball.java" />
-        <option value="$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java" />
         <option value="$PROJECT_DIR$/src/ch/bbw/model/Field.java" />
+        <option value="$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java" />
+        <option value="$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java" />
       </list>
     </option>
   </component>
@@ -147,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
@@ -378,11 +384,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531232159801</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed ball disapearing">
+      <created>1534946704030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534946704030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28089000" />
+    <option name="totallyTimeSpent" value="29141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,8 +470,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Made the game time dependent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the game time dependent" />
+    <MESSAGE value="Fixed ball disapearing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ball disapearing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ch/bbw/model/Ball.java">
@@ -820,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/bbw/model/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -836,15 +844,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/bbw/model/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/bbw/view/FXMLTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/bbw/controller/FXMLDocumentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="427">
+          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <folding>
+            <element signature="e#2679#2959#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

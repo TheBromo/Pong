@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="484.0" maxWidth="784.0" minHeight="484.0" minWidth="784.0" prefHeight="484.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.controller.FXMLDocumentController">
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.controller.FXMLDocumentController">
    <children>
-      <Canvas id="canvas" fx:id="canvas" height="550.0" width="850.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased"  focusTraversable="true"/>
+      <Canvas id="canvas" fx:id="canvas" focusTraversable="true" height="550.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased" width="850.0" />
    </children>
 </Pane>
